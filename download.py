@@ -2,6 +2,7 @@
 # Requirements.txt deliberately omitted
 import requests
 import sys
-
-resp = requests.get(sys.argv[1])
+import json
+params = json.load(sys.stdin)
+resp = requests.get(params.url)
 print(resp.text)
