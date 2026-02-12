@@ -5,4 +5,4 @@ import sys
 import json
 params = json.load(sys.stdin)
 resp = requests.get(params.get("url"))
-json.dump({"html": resp.text}, sys.stdout)
+json.dump({"html_text": resp.text}, sys.stdout)
